@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/index.css"> 
+    <title>ToDo's</title>
+</head>
+<body onload="handleOnLoad()">
+    <script type="text/javascript" src="./resources/scripts/index.js"></script>
+    <script type="text/javascript" src="./resources/scripts/modal.js"></script>
+    <h1>My ToDo List</h1>
+    <div id="table"></div>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <form onsubmit="return false" method="POST">
+                <label for="updateTask">Task</label>
+                <input type="text" name="updateTask" id="updateTask">
+                <input type="submit" value="Submit" id="updateSubmit">
+            </form>
+        </div>
+    </div>
+    <form onsubmit="return false">
+        <input type="text" name="task" id="task">
+        <input type="submit" value="Submit" onclick="handleAddTask()">
+    </form>
+</body>
+</html>
